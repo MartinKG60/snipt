@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Post-build script that:
- * 1. Zips the generated installer
- * 2. Copies it to the landing page downloads folder
+ * Post-build script that creates a ZIP file of the installer for GitHub Releases
  */
 
 const fs = require('fs');
@@ -11,12 +9,6 @@ const path = require('path');
 const archiver = require('archiver');
 
 const releaseDir = path.join(__dirname, '..', 'release');
-const downloadDir = path.join(__dirname, '..', '..', 'docs', 'downloads');
-
-// Create downloads directory if it doesn't exist
-if (!fs.existsSync(downloadDir)) {
-  fs.mkdirSync(downloadDir, { recursive: true });
-}
 
 /**
  * Find the latest installer file
@@ -46,7 +38,7 @@ function findInstallerFile() {
  */
 async function createZip(installerFile) {
   const sourceFile = path.join(releaseDir, installerFile);
-  const zipFile = path.join(downloadDir, 'Snipt-Setup.zip');
+  const zipFile = path.join(releaseDir, 'Snipt-Setup.zip');
   
   return new Promise((resolve, reject) => {
     const output = fs.createWriteStream(zipFile);
@@ -73,7 +65,7 @@ async function createZip(installerFile) {
  */
 async function main() {
   try {
-    console.log('🔄 Post-build: Preparing installer for download...\n');
+    console.log('🔄 Creating ZIP for release...\n');
     
     const installerFile = findInstallerFile();
     if (!installerFile) {
@@ -84,10 +76,10 @@ async function main() {
     console.log(`📦 Found installer: ${installerFile}`);
     
     const zipPath = await createZip(installerFile);
-    console.log(`\n✨ Build complete! Installer ready at: docs/downloads/Snipt-Setup.zip`);
+    console.log(`\n✨ ZIP ready for GitHub release: release/Snipt-Setup.zip`);
     
   } catch (error) {
-    console.error('❌ Error in post-build script:', error.message);
+    console.error('❌ Error in release script:', error.message);
     process.exit(1);
   }
 }

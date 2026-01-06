@@ -11,11 +11,11 @@
     "dev:vite": "vite",
     "dev:electron": "wait-on http://localhost:5173 && electron .",
     "build": "vite build",
-    "build:win": "set CSC_IDENTITY_AUTO_DISCOVERY=false && npm run build && electron-builder --win && node scripts/copy-to-downloads.js",
-    "build:mac": "npm run build && electron-builder --mac && node scripts/copy-to-downloads.js",
-    "build:linux": "npm run build && electron-builder --linux && node scripts/copy-to-downloads.js",
-    "build:portable": "set CSC_IDENTITY_AUTO_DISCOVERY=false && npm run build && electron-builder --win portable && node scripts/copy-to-downloads.js",
-    "package": "npm run build && electron-builder --win --mac --linux && node scripts/copy-to-downloads.js"
+    "build:win": "set CSC_IDENTITY_AUTO_DISCOVERY=false && npm run build && electron-builder --win && node scripts/create-release-zip.js",
+    "build:mac": "npm run build && electron-builder --mac && node scripts/create-release-zip.js",
+    "build:linux": "npm run build && electron-builder --linux && node scripts/create-release-zip.js",
+    "build:portable": "set CSC_IDENTITY_AUTO_DISCOVERY=false && npm run build && electron-builder --win portable && node scripts/create-release-zip.js",
+    "package": "npm run build && electron-builder --win --mac --linux && node scripts/create-release-zip.js"
   },
   "dependencies": {
     "react": "^18.3.1",
