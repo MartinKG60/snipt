@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, BrowserRouter as Router } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
+import Login from './pages/Login';
 import { getCurrentUser } from './utils/auth';
 
 export default function App() {
@@ -15,6 +16,10 @@ export default function App() {
     setIsAuthenticated(!!user);
   };
 
+  const handleLoginSuccess = () => {
+    setIsAuthenticated(true);
+  };
+
   if (isAuthenticated === null) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-dark-bg text-white">
@@ -26,18 +31,13 @@ export default function App() {
     );
   }
 
-  if (!isAuthenticated) {
-    // Redirect to landing page for login
-    window.location.href = 'https://martinkG60.github.io/snipt/';
-    return null;
-  }
-
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+      {!isAuthenticated ? (
+        <Login onLoginSuccess={handleLoginSuccess} />
+      ) : (
+        <Dashboard />
+      )}
     </Router>
   );
 }

@@ -19,6 +19,9 @@ export default function Navbar() {
           <Link to="/" className="hover:text-primary-400 transition">
             Gallery
           </Link>
+          <Link to="/settings" className="hover:text-primary-400 transition">
+            Settings
+          </Link>
           <button 
             onClick={handleLogout}
             className="bg-primary-600 hover:bg-primary-500 px-4 py-2 rounded transition"

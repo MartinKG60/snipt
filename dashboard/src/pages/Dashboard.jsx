@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Gallery from './Gallery';
-import { getCurrentUser } from '../utils/auth';
+import Settings from './Settings';
+import { getCurrentUser, logout } from '../utils/auth';
 
 export default function Dashboard() {
   const [user, setUser] = useState(null);
@@ -15,6 +17,11 @@ export default function Dashboard() {
     const currentUser = await getCurrentUser();
     setUser(currentUser);
     setLoading(false);
+  };
+
+  const handleLogout = async () => {
+    await logout();
+    window.location.href = 'https://martinkG60.github.io/snipt/';
   };
 
   if (loading) {
@@ -31,7 +38,10 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-dark-bg text-white">
       <Navbar />
-      <Gallery />
+      <Routes>
+        <Route path="/" element={<Gallery />} />
+        <Route path="/settings" element={<Settings onLogout={handleLogout} />} />
+      </Routes>
     </div>
   );
 }
