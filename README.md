@@ -11,7 +11,7 @@ snipt/
 │   ├── electron/        # Electron main process
 │   ├── scripts/         # Build scripts
 │   └── package.json
-├── Landingpage/         # Landing page (GitHub Pages)
+├── docs/                # Landing page (GitHub Pages)
 │   ├── index.html
 │   ├── styles.css
 │   ├── script.js
@@ -33,7 +33,7 @@ npm run build:win        # Build Windows installer
 
 ### Landing Page
 
-Landing page hostes via GitHub Pages fra `Landingpage/` mappen.
+Landing page hostes via GitHub Pages fra `docs/` mappen.
 
 ## 📦 Build & Release
 
@@ -41,7 +41,7 @@ Når du builder appen med `npm run build:win`:
 1. Vite bygger React-koden
 2. Electron-builder laver Windows installer
 3. Post-build script komprimerer installer til ZIP
-4. ZIP kopieres til `Landingpage/downloads/`
+4. ZIP kopieres til `docs/downloads/`
 
 ```bash
 cd app_Electron

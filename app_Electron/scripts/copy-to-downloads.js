@@ -11,7 +11,7 @@ const path = require('path');
 const archiver = require('archiver');
 
 const releaseDir = path.join(__dirname, '..', 'release');
-const downloadDir = path.join(__dirname, '..', '..', 'Landingpage', 'downloads');
+const downloadDir = path.join(__dirname, '..', '..', 'docs', 'downloads');
 
 // Create downloads directory if it doesn't exist
 if (!fs.existsSync(downloadDir)) {
@@ -84,7 +84,7 @@ async function main() {
     console.log(`📦 Found installer: ${installerFile}`);
     
     const zipPath = await createZip(installerFile);
-    console.log(`\n✨ Build complete! Installer ready at: Landingpage/downloads/Snipt-Setup.zip`);
+    console.log(`\n✨ Build complete! Installer ready at: docs/downloads/Snipt-Setup.zip`);
     
   } catch (error) {
     console.error('❌ Error in post-build script:', error.message);

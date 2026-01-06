@@ -18,7 +18,7 @@ app_Electron/release/
 app_Electron/dist/
 
 # Downloads (hosted on GitHub Releases)
-Landingpage/downloads/
+docs/downloads/
 
 # IDE
 .vscode/
