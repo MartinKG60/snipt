@@ -38,7 +38,7 @@ function findInstallerFile() {
  */
 async function createZip(installerFile) {
   const sourceFile = path.join(releaseDir, installerFile);
-  const zipFile = path.join(releaseDir, 'Snipt-Setup.zip');
+  const zipFile = path.join(releaseDir, 'Snipt.zip');
   
   return new Promise((resolve, reject) => {
     const output = fs.createWriteStream(zipFile);
@@ -76,7 +76,7 @@ async function main() {
     console.log(`📦 Found installer: ${installerFile}`);
     
     const zipPath = await createZip(installerFile);
-    console.log(`\n✨ ZIP ready for GitHub release: release/Snipt-Setup.zip`);
+    console.log(`\n✨ ZIP ready for GitHub release: release/Snipt.zip`);
     
   } catch (error) {
     console.error('❌ Error in release script:', error.message);
