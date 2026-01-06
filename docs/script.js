@@ -54,5 +54,43 @@ style.textContent = `
             transform: translateY(0);
         }
     }
+    
+    #download-counter-dev {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(11, 147, 255, 0.2);
+        border: 1px solid rgba(11, 147, 255, 0.5);
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.8);
+        font-family: 'Courier New', monospace;
+        z-index: 500;
+        backdrop-filter: blur(10px);
+    }
 `;
 document.head.appendChild(style);
+
+// Download Counter - GitHub API
+async function updateDownloadCounter() {
+    try {
+        const res = await fetch('https://api.github.com/repos/MartinKG60/Snipt-V2/releases/latest');
+        const data = await res.json();
+        
+        if (data.assets && data.assets.length > 0) {
+            const totalDownloads = data.assets.reduce((sum, asset) => sum + asset.download_count, 0);
+            const assets = data.assets.map(a => `${a.name}: ${a.download_count}`).join(' | ');
+            
+            const counterDiv = document.getElementById('download-counter-dev');
+            counterDiv.innerHTML = `📊 Downloads: ${totalDownloads}<br><small>${assets}</small>`;
+        }
+    } catch (error) {
+        console.log('Download counter error:', error);
+    }
+}
+
+// Call on page load and refresh every 5 minutes
+updateDownloadCounter();
+setInterval(updateDownloadCounter, 300000);
