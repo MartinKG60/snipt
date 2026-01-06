@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%);
+  color: #ffffff;
+}
+
+:root {
+  --dark-bg: #0f0f23;
+  --dark-surface: #1a1a3e;
+  --primary-400: #0b93ff;
+  --primary-500: #0b93ff;
+  --primary-600: #0078d7;
+  --text-white: #ffffff;
+  --border-light: rgba(255, 255, 255, 0.1);
+}
+
+#root {
+  min-height: 100vh;
+}
