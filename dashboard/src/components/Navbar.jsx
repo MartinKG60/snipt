@@ -1,13 +1,11 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { logout } from '../utils/auth';
 
 export default function Navbar() {
-  const navigate = useNavigate();
-
   const handleLogout = async () => {
     await logout();
-    navigate('/login');
+    window.location.href = 'https://martinkG60.github.io/snipt/';
   };
 
   return (
@@ -17,12 +15,9 @@ export default function Navbar() {
           Snipt Dashboard
         </Link>
         
-        <div className="flex gap-4">
-          <Link to="/gallery" className="hover:text-primary-400 transition">
+        <div className="flex gap-4 items-center">
+          <Link to="/" className="hover:text-primary-400 transition">
             Gallery
-          </Link>
-          <Link to="/settings" className="hover:text-primary-400 transition">
-            Settings
           </Link>
           <button 
             onClick={handleLogout}
