@@ -75,19 +75,28 @@ document.head.appendChild(style);
 
 // Download Counter - GitHub API
 async function updateDownloadCounter() {
+    const counterDiv = document.getElementById('download-counter-dev');
+
     try {
-        const res = await fetch('https://api.github.com/repos/MartinKG60/Snipt-V2/releases/latest');
+        const res = await fetch('https://api.github.com/repos/MartinKG60/snipt/releases/latest');
+
+        if (!res.ok) {
+            throw new Error(`GitHub API responded ${res.status}`);
+        }
+
         const data = await res.json();
-        
+
         if (data.assets && data.assets.length > 0) {
             const totalDownloads = data.assets.reduce((sum, asset) => sum + asset.download_count, 0);
             const assets = data.assets.map(a => `${a.name}: ${a.download_count}`).join(' | ');
-            
-            const counterDiv = document.getElementById('download-counter-dev');
+
             counterDiv.innerHTML = `📊 Downloads: ${totalDownloads}<br><small>${assets}</small>`;
+        } else {
+            counterDiv.innerHTML = '📊 Downloads: 0 (no assets found)';
         }
     } catch (error) {
         console.log('Download counter error:', error);
+        counterDiv.innerHTML = '⚠️ Downloads: not available';
     }
 }
 
