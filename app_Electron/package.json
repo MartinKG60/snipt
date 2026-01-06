@@ -1,0 +1,79 @@
+{
+  "name": "snipt",
+  "version": "1.0.0",
+  "description": "Professional screenshot and annotation tool",
+  "main": "electron/main.js",
+  "author": "Snipt",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:vite\" \"npm run dev:electron\"",
+    "dev:vite": "vite",
+    "dev:electron": "wait-on http://localhost:5173 && electron .",
+    "build": "vite build",
+    "build:win": "set CSC_IDENTITY_AUTO_DISCOVERY=false && npm run build && electron-builder --win && node scripts/copy-to-downloads.js",
+    "build:mac": "npm run build && electron-builder --mac && node scripts/copy-to-downloads.js",
+    "build:linux": "npm run build && electron-builder --linux && node scripts/copy-to-downloads.js",
+    "build:portable": "set CSC_IDENTITY_AUTO_DISCOVERY=false && npm run build && electron-builder --win portable && node scripts/copy-to-downloads.js",
+    "package": "npm run build && electron-builder --win --mac --linux && node scripts/copy-to-downloads.js"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "firebase": "^10.13.0",
+    "@supabase/supabase-js": "^2.45.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.2",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "concurrently": "^8.2.2",
+    "wait-on": "^7.2.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "archiver": "^6.0.1"
+  },
+  "build": {
+    "appId": "com.snipt.app",
+    "productName": "Snipt",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        },
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "target": ["dmg"],
+      "icon": "build/icon.icns",
+      "category": "public.app-category.productivity"
+    },
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "icon": "build/icon.png",
+      "category": "Utility"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
