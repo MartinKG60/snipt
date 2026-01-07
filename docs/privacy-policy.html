@@ -7,83 +7,33 @@
     <meta name="keywords" content="privacy policy, data protection, Snipt">
     
     <title>Privacy Policy - Snipt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .policy-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .policy-header {
-            text-align: center;
-            margin-bottom: 50px;
-            padding: 40px 0;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .policy-header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #667eea;
-        }
-
-        .policy-header p {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 1em;
-        }
-
-        .policy-section {
-            margin-bottom: 40px;
-            line-height: 1.8;
-        }
-
-        .policy-section h2 {
-            font-size: 1.6em;
-            margin: 30px 0 15px 0;
-            color: #667eea;
-            border-left: 4px solid #667eea;
-            padding-left: 15px;
-        }
-
-        .policy-section h3 {
-            font-size: 1.2em;
-            margin: 20px 0 10px 0;
-            color: #fff;
-        }
-
-        .policy-section p {
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 15px;
-        }
-
-        .policy-section ul {
-            margin-left: 20px;
-            color: rgba(255, 255, 255, 0.85);
-        }
-
-        .policy-section li {
-            margin-bottom: 10px;
-        }
-
-        .last-updated {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9em;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-    </style>
 </head>
 <body>
-    <nav style="padding: 20px 0; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-        <div style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
-            <a href="index.html" style="color: #667eea; text-decoration: none; font-weight: 600; margin-right: 30px;">← Back to Home</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="images/logo-blue-200.png" alt="Snipt Logo" class="logo-img">
+                    <span>Snipt</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#screenshots">Screenshots</a>
+                    <a href="about.html">About</a>
+                    <a href="https://dashboard.usesnipt.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Login</a>
+                    <a href="index.html#download" class="btn-primary">Download</a>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <div class="policy-container">
-        <div class="policy-header">
+    <div class="page-container">
+        <div class="page-header">
             <h1>Privacy Policy</h1>
             <p>Last updated: January 7, 2026</p>
         </div>
@@ -214,14 +164,18 @@
         </p>
     </div>
 
-    <footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.6);">
-        <p>&copy; 2026 Snipt. All rights reserved.</p>
-        <p style="margin-top: 10px; font-size: 0.9em;">
-            <a href="index.html" style="color: #667eea; text-decoration: none; margin: 0 10px;">Home</a>
-            <a href="about.html" style="color: #667eea; text-decoration: none; margin: 0 10px;">About</a>
-            <a href="privacy-policy.html" style="color: #667eea; text-decoration: none; margin: 0 10px;">Privacy</a>
-            <a href="terms-of-service.html" style="color: #667eea; text-decoration: none; margin: 0 10px;">Terms</a>
-        </p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Snipt. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="about.html">About</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
