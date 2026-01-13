@@ -309,6 +309,76 @@ body {
 }
 
 /* Features Section */
+/* Selling Points Section */
+.selling-points {
+    position: relative;
+    padding: 100px 20px;
+    background: linear-gradient(180deg, rgba(11, 147, 255, 0.08) 0%, transparent 100%);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.selling-points h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.selling-points-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.selling-point {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 30px 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selling-point:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--primary-500);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(11, 147, 255, 0.15);
+}
+
+.point-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.point-icon svg {
+    width: 28px;
+    height: 28px;
+    color: white;
+}
+
+.selling-point h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.selling-point p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
 .features {
     position: relative;
     padding: 100px 20px;
@@ -736,6 +806,23 @@ body {
 
     .feature-card {
         padding: 30px 20px;
+    }
+
+    .selling-points {
+        padding: 60px 15px;
+    }
+
+    .selling-points h2 {
+        font-size: 1.8rem;
+    }
+
+    .selling-points-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .selling-point {
+        padding: 25px 20px;
     }
 
     .screenshots {

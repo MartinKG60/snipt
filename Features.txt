@@ -1,0 +1,12 @@
+
+Settings:
+Close app to taskbar
+
+
+Free:
+Max 10 uploads per month
+
+
+Stripe (10 dollars):
+Infinite uploads
+More features?
