@@ -3,7 +3,7 @@
     <!-- Homepage -->
     <url>
         <loc>https://usesnipt.com/</loc>
-        <lastmod>2025-01-13</lastmod>
+        <lastmod>2026-01-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -11,28 +11,28 @@
     <!-- Comparison Pages -->
     <url>
         <loc>https://usesnipt.com/comparisons/best-screenshot-tools.html</loc>
-        <lastmod>2025-01-13</lastmod>
+        <lastmod>2026-01-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://usesnipt.com/comparisons/snipt-vs-greenshot.html</loc>
-        <lastmod>2025-01-13</lastmod>
+        <lastmod>2026-01-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://usesnipt.com/comparisons/snipt-vs-snagit.html</loc>
-        <lastmod>2025-01-13</lastmod>
+        <lastmod>2026-01-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://usesnipt.com/comparisons/snipt-vs-sharex.html</loc>
-        <lastmod>2025-01-13</lastmod>
+        <lastmod>2026-01-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -40,7 +40,7 @@
     <!-- Blog -->
     <url>
         <loc>https://usesnipt.com/blog/</loc>
-        <lastmod>2025-01-13</lastmod>
+        <lastmod>2026-01-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -48,35 +48,35 @@
     <!-- Use Cases -->
     <url>
         <loc>https://usesnipt.com/use-cases/</loc>
-        <lastmod>2025-01-13</lastmod>
+        <lastmod>2026-01-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://usesnipt.com/use-cases/support-teams.html</loc>
-        <lastmod>2025-01-13</lastmod>
+        <lastmod>2026-01-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://usesnipt.com/use-cases/remote-teams.html</loc>
-        <lastmod>2025-01-13</lastmod>
+        <lastmod>2026-01-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://usesnipt.com/use-cases/designers-developers.html</loc>
-        <lastmod>2025-01-13</lastmod>
+        <lastmod>2026-01-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://usesnipt.com/use-cases/tutorial-creators.html</loc>
-        <lastmod>2025-01-13</lastmod>
+        <lastmod>2026-01-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -84,7 +84,7 @@
     <!-- Help & FAQ -->
     <url>
         <loc>https://usesnipt.com/help/</loc>
-        <lastmod>2025-01-13</lastmod>
+        <lastmod>2026-01-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -92,7 +92,7 @@
     <!-- Social Proof -->
     <url>
         <loc>https://usesnipt.com/social-proof/testimonials.html</loc>
-        <lastmod>2025-01-13</lastmod>
+        <lastmod>2026-01-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -100,7 +100,7 @@
     <!-- About -->
     <url>
         <loc>https://usesnipt.com/about.html</loc>
-        <lastmod>2025-01-13</lastmod>
+        <lastmod>2026-01-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -108,15 +108,53 @@
     <!-- Legal -->
     <url>
         <loc>https://usesnipt.com/privacy-policy.html</loc>
-        <lastmod>2025-01-13</lastmod>
+        <lastmod>2026-01-14</lastmod>
         <changefreq>quarterly</changefreq>
         <priority>0.5</priority>
     </url>
 
     <url>
         <loc>https://usesnipt.com/terms-of-service.html</loc>
-        <lastmod>2025-01-13</lastmod>
+        <lastmod>2026-01-14</lastmod>
         <changefreq>quarterly</changefreq>
         <priority>0.5</priority>
+    </url>
+
+    <!-- New SEO Landing Pages -->
+    <url>
+        <loc>https://usesnipt.com/screenshot-tools/</loc>
+        <lastmod>2026-01-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://usesnipt.com/screenshot-tools-for-mac/</loc>
+        <lastmod>2026-01-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://usesnipt.com/screenshot-tools-for-windows/</loc>
+        <lastmod>2026-01-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://usesnipt.com/best-screenshot-tool-for-windows/</loc>
+        <lastmod>2026-01-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://usesnipt.com/tool-to-capture-screenshot/</loc>
+        <lastmod>2026-01-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://usesnipt.com/screenshot-tools-for-linux/</loc>
+        <lastmod>2026-01-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
 </urlset>
