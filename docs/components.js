@@ -3,7 +3,16 @@
 
 function getBasePath() {
     const path = window.location.pathname;
-    const depth = (path.match(/\//g) || []).length - 2; // -2 for domain and trailing
+    // Remove the filename to get directory path
+    const dirPath = path.substring(0, path.lastIndexOf('/'));
+    
+    // Find 'docs' in the path and count directories after it
+    const docsIndex = dirPath.indexOf('/docs');
+    if (docsIndex === -1) return '';
+    
+    const afterDocs = dirPath.substring(docsIndex + 5); // +5 for '/docs'
+    const depth = afterDocs.split('/').filter(x => x).length;
+    
     return depth > 0 ? '../'.repeat(depth) : '';
 }
 
