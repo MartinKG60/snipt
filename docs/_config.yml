@@ -1,0 +1,32 @@
+# Jekyll configuration for Snipt
+title: Snipt
+description: Capture. Crop. Share.
+baseurl: ""
+url: "https://usesnipt.com"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Exclude files
+exclude:
+  - README.md
+  - node_modules/
+  - package.json
+  - package-lock.json
+
+# Collections
+collections:
+  use-cases:
+    output: true
+    permalink: /use-cases/:name/
+  comparisons:
+    output: true
+    permalink: /comparisons/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

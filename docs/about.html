@@ -1,24 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Snipt - a lightweight, free screenshot tool built by an IT Support professional. Discover why Snipt was created and how it simplifies screenshot capturing and cloud storage.">
-    <meta name="keywords" content="screenshot tool, free screenshot software, screenshot app, cloud storage, IT support, Windows screenshot, screen capture">
-    <meta name="author" content="Snipt">
-    <meta property="og:title" content="About Snipt - Free Screenshot Tool">
-    <meta property="og:description" content="Discover the story behind Snipt and why we built the easiest screenshot tool for cloud sharing.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snipt.dev/about">
-    
-    <title>About Snipt - Why We Built the Free Screenshot Tool</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div id="header-placeholder"></div>
+---
+layout: default
+title: About Snipt - Why We Built the Free Screenshot Tool
+description: Learn about Snipt - a lightweight, free screenshot tool built by an IT Support professional. Discover why Snipt was created and how it simplifies screenshot capturing and cloud storage.
+permalink: /about/
+---
 
     <div class="page-container">
         <div class="page-header">
@@ -211,40 +196,4 @@
         </section>
     </div>
 
-    <div id="footer-placeholder"></div>
 
-    <script src="components.js"></script>
-    <script>
-        // Schema.org structured data for better SEO
-        const schemaData = {
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "Snipt",
-            "description": "A lightweight, free screenshot tool with cloud integration for Windows",
-            "applicationCategory": "UtilitiesApplication",
-            "operatingSystem": "Windows",
-            "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD"
-            },
-            "author": {
-                "@type": "Person",
-                "name": "IT Support Professional"
-            },
-            "featureList": [
-                "Screenshot capture",
-                "Area selection",
-                "Cloud upload",
-                "Share links",
-                "Lightweight and fast"
-            ]
-        };
-
-        const script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.textContent = JSON.stringify(schemaData);
-        document.head.appendChild(script);
-    </script>
-</body>
-</html>

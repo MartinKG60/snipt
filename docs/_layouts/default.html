@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | Snipt{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="icon" href="{{ '/images/logo-blue-200.png' | relative_url }}" type="image/png">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:image" content="{{ '/images/logo-blue-200.png' | absolute_url }}">
+    <meta property="og:type" content="{% if page.og_type %}{{ page.og_type }}{% else %}website{% endif %}">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image" content="{{ '/images/logo-blue-200.png' | absolute_url }}">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+    {% if page.custom_css %}
+    <style>{{ page.custom_css }}</style>
+    {% endif %}
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="{{ '/' | relative_url }}" class="logo">
+                    <img src="{{ '/images/logo-blue-200.png' | relative_url }}" alt="Snipt Logo" class="logo-img">
+                    <span>Snipt</span>
+                </a>
+                <div class="nav-links">
+                    <a href="{{ '/' | relative_url }}#features">Features</a>
+                    <a href="{{ '/use-cases/' | relative_url }}">Use Cases</a>
+                    <a href="{{ '/about/' | relative_url }}">About</a>
+                    <a href="https://dashboard.usesnipt.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Login</a>
+                    <a href="{{ '/' | relative_url }}#download" class="btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    {{ content }}
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <p>&copy; {{ 'now' | date: "%Y" }} Snipt. All rights reserved.</p>
+                </div>
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="{{ '/about/' | relative_url }}">About</a>
+                        <a href="{{ '/privacy-policy/' | relative_url }}">Privacy Policy</a>
+                        <a href="{{ '/terms-of-service/' | relative_url }}">Terms of Service</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <a href="{{ '/comparisons/best-screenshot-tools/' | relative_url }}">Comparisons</a>
+                        <a href="{{ '/help/' | relative_url }}">Help & FAQ</a>
+                        <a href="{{ '/use-cases/' | relative_url }}">Use Cases</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Screenshot Tools</h4>
+                        <a href="{{ '/screenshot-tools/' | relative_url }}">All Platforms</a>
+                        <a href="{{ '/screenshot-tools-for-mac/' | relative_url }}">Mac</a>
+                        <a href="{{ '/screenshot-tools-for-windows/' | relative_url }}">Windows</a>
+                        <a href="{{ '/screenshot-tools-for-linux/' | relative_url }}">Linux</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ '/script.js' | relative_url }}"></script>
+    {% if page.custom_js %}
+    <script>{{ page.custom_js }}</script>
+    {% endif %}
+</body>
+</html>
