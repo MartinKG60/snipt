@@ -1,4 +1,7 @@
 
+Chrome extension app
+
+
 Settings:
 Close app to taskbar
 
