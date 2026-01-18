@@ -29,6 +29,37 @@
     {% if page.custom_css %}
     <style>{{ page.custom_css }}</style>
     {% endif %}
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Snipt",
+      "applicationCategory": "DesktopApplication",
+      "operatingSystem": "Windows 7, Windows 8, Windows 10, Windows 11",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "150"
+      },
+      "description": "Free screenshot tool for Windows with editing, annotations, and instant sharing. Capture screenshots, annotate clearly, and share encrypted links.",
+      "softwareVersion": "1.0.0",
+      "downloadUrl": "https://github.com/MartinKG60/snipt/releases/latest/download/Snipt.zip",
+      "screenshot": "https://usesnipt.com/images/logo-blue-200.png",
+      "author": {
+        "@type": "Organization",
+        "name": "Snipt"
+      },
+      "url": "https://usesnipt.com"
+    }
+    </script>
+    {% if page.schema %}{{ page.schema }}{% endif %}
 </head>
 <body>
     <!-- Navigation -->
@@ -76,9 +107,16 @@
                     <div class="footer-column">
                         <h4>Screenshot Tools</h4>
                         <a href="{{ '/screenshot-tools/' | relative_url }}">All Platforms</a>
-                        <a href="{{ '/screenshot-tools-for-mac/' | relative_url }}">Mac</a>
                         <a href="{{ '/screenshot-tools-for-windows/' | relative_url }}">Windows</a>
-                        <a href="{{ '/screenshot-tools-for-linux/' | relative_url }}">Linux</a>
+                        <a href="{{ '/screenshot-tool-on-windows/' | relative_url }}">Screenshot Tool on Windows</a>
+                        <a href="{{ '/best-screenshot-tool-for-windows/' | relative_url }}">Best for Windows</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Features & Comparisons</h4>
+                        <a href="{{ '/screenshot-tool-with-editing/' | relative_url }}">Editing Features</a>
+                        <a href="{{ '/capture-screenshot-tool/' | relative_url }}">Capture Tool</a>
+                        <a href="{{ '/screenshot-tool-snagit/' | relative_url }}">vs Snagit</a>
+                        <a href="{{ '/comparisons/best-screenshot-tools/' | relative_url }}">All Comparisons</a>
                     </div>
                 </div>
             </div>
