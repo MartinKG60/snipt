@@ -17,378 +17,237 @@ schema: |
     }
   }
   </script>
-custom_css: |
-  .comparison-hero { padding: 60px 20px 40px; text-align: center; margin-top: 60px; }
-  .comparison-hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
-  .tool-card { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-light); border-radius: 12px; padding: 30px; margin-bottom: 30px; display: grid; grid-template-columns: 1fr 2fr; gap: 30px; align-items: start; }
-  .tool-card.featured { border: 2px solid var(--primary-500); background: rgba(11, 147, 255, 0.1); }
-  .tool-card h3 { color: var(--primary-500); margin-bottom: 10px; }
-  .tool-badge { display: inline-block; background: var(--primary-500); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; margin-bottom: 15px; margin-right: 5px; }
-  .tool-details { display: flex; flex-direction: column; gap: 15px; }
-  .tool-detail-item { padding: 10px; background: rgba(255, 255, 255, 0.02); border-radius: 8px; }
-  .tool-detail-item strong { display: block; color: var(--text-light); font-size: 0.9rem; margin-bottom: 3px; }
-  .tool-detail-item span { display: block; font-size: 1.1rem; }
-  .tool-pros { list-style: none; padding: 0; }
-  .tool-pros li { margin-bottom: 8px; padding-left: 20px; position: relative; font-size: 0.95rem; }
-  .tool-pros li:before { content: "✓"; position: absolute; left: 0; color: #10b981; font-weight: bold; }
-  .comparison-table { width: 100%; border-collapse: collapse; margin: 40px 0; background: rgba(255, 255, 255, 0.03); border-radius: 12px; overflow: hidden; border: 1px solid var(--border-light); }
-  .comparison-table th, .comparison-table td { padding: 12px 15px; text-align: left; border-bottom: 1px solid var(--border-light); font-size: 0.9rem; }
-  .comparison-table th { background: rgba(11, 147, 255, 0.1); font-weight: 600; color: var(--primary-500); }
-  .comparison-table tr:last-child td { border-bottom: none; }
-  .check { color: #10b981; }
-  .cross { color: #ef4444; }
-  .guide-section { margin: 50px 0; padding: 30px; background: rgba(255, 255, 255, 0.02); border-radius: 12px; }
-  .guide-section h3 { color: var(--primary-500); margin-bottom: 15px; }
-  .guide-section ul { list-style: none; padding: 0; margin-left: 0; }
-  .guide-section li { margin-bottom: 10px; padding-left: 20px; position: relative; }
-  .guide-section li:before { content: "→"; position: absolute; left: 0; color: var(--primary-500); }
-  .cta-section { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, rgba(11, 147, 255, 0.1) 0%, transparent 100%); border-radius: 12px; margin: 60px 0; }
-  @media (max-width: 768px) { .tool-card { grid-template-columns: 1fr; } .comparison-table { font-size: 0.85rem; } .comparison-table th, .comparison-table td { padding: 10px; } }
 ---
 
-    <main>
-            font-weight: 600;
-            color: var(--primary-500);
-        }
+<main>
+  <section class="comparison-hero">
+    <div class="container">
+      <h1>Best Free Screenshot Tools for Windows</h1>
+      <p class="section-subtitle">2024 Guide to Choosing the Right Screenshot Tool</p>
+    </div>
+  </section>
 
-        .comparison-table tr:last-child td {
-            border-bottom: none;
-        }
+  <section class="content-section">
+    <div class="container">
+      <div class="guide-section">
+        <h3>What Makes a Great Screenshot Tool?</h3>
+        <ul>
+          <li><strong>Speed:</strong> Capture and share in seconds</li>
+          <li><strong>Simplicity:</strong> Works out of the box with no setup</li>
+          <li><strong>Sharing:</strong> Easy ways to send screenshots to others</li>
+          <li><strong>Annotation:</strong> Add notes and highlights</li>
+          <li><strong>Organization:</strong> Keep all screenshots in one place</li>
+          <li><strong>Free/Affordable:</strong> No expensive subscriptions</li>
+        </ul>
+      </div>
 
-        .check {
-            color: #10b981;
-        }
-
-        .cross {
-            color: #ef4444;
-        }
-
-        .guide-section {
-            margin: 50px 0;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 12px;
-        }
-
-        .guide-section h3 {
-            color: var(--primary-500);
-            margin-bottom: 15px;
-        }
-
-        .guide-section ul {
-            list-style: none;
-            padding: 0;
-            margin-left: 0;
-        }
-
-        .guide-section li {
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .guide-section li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--primary-500);
-        }
-
-        .cta-section {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, rgba(11, 147, 255, 0.1) 0%, transparent 100%);
-            border-radius: 12px;
-            margin: 60px 0;
-        }
-
-        @media (max-width: 768px) {
-            .tool-card {
-                grid-template-columns: 1fr;
-            }
-
-            .comparison-table {
-                font-size: 0.85rem;
-            }
-
-            .comparison-table th,
-            .comparison-table td {
-                padding: 10px;
-            }
-        }
-    </style>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Best Free Screenshot Tools for Windows 2024",
-        "description": "Comprehensive guide to the best screenshot tools available",
-        "image": "https://usesnipt.com/images/logo-blue-200.png",
-        "datePublished": "2024-01-13",
-        "dateModified": "2024-01-13",
-        "author": {
-            "@type": "Organization",
-            "name": "Snipt",
-            "url": "https://usesnipt.com"
-        }
-    }
-    </script>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="/" class="logo">
-                    <img src="/images/logo-blue-200.png" alt="Snipt Logo" class="logo-img">
-                    <span>Snipt</span>
-                </a>
-                <div class="nav-links">
-                    <a href="/#features">Features</a>
-                    <a href="/help/">Help</a>
-                    <a href="https://dashboard.usesnipt.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Login</a>
-                    <a href="https://github.com/MartinKG60/snipt/releases/latest/download/Snipt.zip" class="btn-primary" download>Download</a>
-                </div>
-            </div>
+      <div class="tool-card featured">
+        <div>
+          <div class="tool-badge">Best for Teams</div>
+          <h3>Snipt</h3>
+          <p>Lightning-fast capturing, annotating, and sharing with encrypted links</p>
+          <ul class="tool-pros">
+            <li>Zero installation - download and run instantly</li>
+            <li>Built-in cloud sharing with Supabase</li>
+            <li>Encrypted shareable links</li>
+            <li>Screenshot gallery and history</li>
+            <li>Perfect for support teams and remote work</li>
+            <li>Lightweight and fast</li>
+          </ul>
         </div>
-    </nav>
+        <div class="tool-details">
+          <div class="tool-detail-item">
+            <strong>Price:</strong>
+            <span>FREE</span>
+          </div>
+          <div class="tool-detail-item">
+            <strong>Best For:</strong>
+            <span>Teams, collaboration, instant sharing</span>
+          </div>
+          <div class="tool-detail-item">
+            <strong>Setup Time:</strong>
+            <span>0 minutes</span>
+          </div>
+          <a href="https://github.com/MartinKG60/snipt/releases/latest/download/Snipt.zip" class="btn-primary" download>Download Snipt</a>
+        </div>
+      </div>
 
-    <main>
-        <section class="comparison-hero">
-            <div class="container">
-                <h1>Best Free Screenshot Tools for Windows</h1>
-                <p class="section-subtitle">2024 Guide to Choosing the Right Screenshot Tool</p>
-            </div>
-        </section>
+      <div class="tool-card">
+        <div>
+          <div class="tool-badge">Best for Power Users</div>
+          <h3>ShareX</h3>
+          <p>Highly customizable tool for advanced users and developers</p>
+          <ul class="tool-pros">
+            <li>80+ upload destination options</li>
+            <li>Advanced automation workflows</li>
+            <li>Screen recording capability</li>
+            <li>Highly customizable interface</li>
+            <li>Open-source with active community</li>
+            <li>Support for custom scripts</li>
+          </ul>
+        </div>
+        <div class="tool-details">
+          <div class="tool-detail-item">
+            <strong>Price:</strong>
+            <span>FREE (Open Source)</span>
+          </div>
+          <div class="tool-detail-item">
+            <strong>Best For:</strong>
+            <span>Developers, power users</span>
+          </div>
+          <div class="tool-detail-item">
+            <strong>Setup Time:</strong>
+            <span>10-20 minutes</span>
+          </div>
+        </div>
+      </div>
 
-        <section>
-            <div class="container">
-                <div class="guide-section">
-                    <h3>What Makes a Great Screenshot Tool?</h3>
-                    <ul>
-                        <li><strong>Speed:</strong> Capture and share in seconds</li>
-                        <li><strong>Simplicity:</strong> Works out of the box with no setup</li>
-                        <li><strong>Sharing:</strong> Easy ways to send screenshots to others</li>
-                        <li><strong>Annotation:</strong> Add notes and highlights</li>
-                        <li><strong>Organization:</strong> Keep all screenshots in one place</li>
-                        <li><strong>Free/Affordable:</strong> No expensive subscriptions</li>
-                    </ul>
-                </div>
+      <div class="tool-card">
+        <div>
+          <div class="tool-badge">Best for Local Control</div>
+          <h3>Greenshot</h3>
+          <p>Open-source tool with local file management</p>
+          <ul class="tool-pros">
+            <li>Open-source and community-driven</li>
+            <li>Good annotation tools</li>
+            <li>Local file storage and control</li>
+            <li>Plugin ecosystem available</li>
+            <li>Lightweight and efficient</li>
+            <li>Customizable hotkeys</li>
+          </ul>
+        </div>
+        <div class="tool-details">
+          <div class="tool-detail-item">
+            <strong>Price:</strong>
+            <span>FREE (Open Source)</span>
+          </div>
+          <div class="tool-detail-item">
+            <strong>Best For:</strong>
+            <span>Privacy-focused users</span>
+          </div>
+          <div class="tool-detail-item">
+            <strong>Setup Time:</strong>
+            <span>5 minutes</span>
+          </div>
+        </div>
+      </div>
 
-                <!-- Snipt Card -->
-                <div class="tool-card featured">
-                    <div class="tool-badge">Best for Teams</div>
-                    <div>
-                        <h3>Snipt</h3>
-                        <p>Lightning-fast capturing, annotating, and sharing with encrypted links</p>
-                        <ul class="tool-pros">
-                            <li>Zero installation - download and run instantly</li>
-                            <li>Built-in cloud sharing with Supabase</li>
-                            <li>Encrypted shareable links</li>
-                            <li>Screenshot gallery and history</li>
-                            <li>Perfect for support teams and remote work</li>
-                            <li>Lightweight and fast</li>
-                        </ul>
-                    </div>
-                    <div class="tool-details">
-                        <div class="tool-detail-item">
-                            <strong>Price:</strong>
-                            <span>FREE</span>
-                        </div>
-                        <div class="tool-detail-item">
-                            <strong>Best For:</strong>
-                            <span>Teams, collaboration, instant sharing</span>
-                        </div>
-                        <div class="tool-detail-item">
-                            <strong>Setup Time:</strong>
-                            <span>0 minutes</span>
-                        </div>
-                        <a href="https://github.com/MartinKG60/snipt/releases/latest/download/Snipt.zip" class="btn-primary" style="margin-top: 10px;" download>Download Snipt</a>
-                    </div>
-                </div>
+      <div class="tool-card">
+        <div>
+          <div class="tool-badge">Best for Professionals</div>
+          <h3>Snagit (TechSmith)</h3>
+          <p>Premium professional screenshot and screen recording tool</p>
+          <ul class="tool-pros">
+            <li>Video recording and editing</li>
+            <li>Advanced drawing tools</li>
+            <li>Cloud storage included</li>
+            <li>Professional-grade features</li>
+            <li>Desktop and mobile apps</li>
+            <li>Integration with TechSmith ecosystem</li>
+          </ul>
+        </div>
+        <div class="tool-details">
+          <div class="tool-detail-item">
+            <strong>Price:</strong>
+            <span>$59.99/year</span>
+          </div>
+          <div class="tool-detail-item">
+            <strong>Best For:</strong>
+            <span>Professionals needing video</span>
+          </div>
+          <div class="tool-detail-item">
+            <strong>Setup Time:</strong>
+            <span>Installation required</span>
+          </div>
+        </div>
+      </div>
 
-                <!-- ShareX Card -->
-                <div class="tool-card">
-                    <div class="tool-badge">Best for Power Users</div>
-                    <div>
-                        <h3>ShareX</h3>
-                        <p>Highly customizable tool for advanced users and developers</p>
-                        <ul class="tool-pros">
-                            <li>80+ upload destination options</li>
-                            <li>Advanced automation workflows</li>
-                            <li>Screen recording capability</li>
-                            <li>Highly customizable interface</li>
-                            <li>Open-source with active community</li>
-                            <li>Support for custom scripts</li>
-                        </ul>
-                    </div>
-                    <div class="tool-details">
-                        <div class="tool-detail-item">
-                            <strong>Price:</strong>
-                            <span>FREE (Open Source)</span>
-                        </div>
-                        <div class="tool-detail-item">
-                            <strong>Best For:</strong>
-                            <span>Developers, power users</span>
-                        </div>
-                        <div class="tool-detail-item">
-                            <strong>Setup Time:</strong>
-                            <span>10-20 minutes</span>
-                        </div>
-                    </div>
-                </div>
+      <h2 class="comparison-heading">Quick Comparison</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Snipt</th>
+            <th>ShareX</th>
+            <th>Greenshot</th>
+            <th>Snagit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Price</strong></td>
+            <td><span class="check">Free</span></td>
+            <td><span class="check">Free</span></td>
+            <td><span class="check">Free</span></td>
+            <td>$59.99/yr</td>
+          </tr>
+          <tr>
+            <td><strong>No Installation</strong></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td><strong>Cloud Sharing</strong></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td><strong>Encrypted Links</strong></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td><strong>Video Recording</strong></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td><strong>Screenshot Gallery</strong></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td><strong>Open Source</strong></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td><strong>Learning Curve</strong></td>
+            <td>Minimal</td>
+            <td>Steep</td>
+            <td>Low</td>
+            <td>Low</td>
+          </tr>
+        </tbody>
+      </table>
 
-                <!-- Greenshot Card -->
-                <div class="tool-card">
-                    <div class="tool-badge">Best for Local Control</div>
-                    <div>
-                        <h3>Greenshot</h3>
-                        <p>Open-source tool with local file management</p>
-                        <ul class="tool-pros">
-                            <li>Open-source and community-driven</li>
-                            <li>Good annotation tools</li>
-                            <li>Local file storage and control</li>
-                            <li>Plugin ecosystem available</li>
-                            <li>Lightweight and efficient</li>
-                            <li>Customizable hotkeys</li>
-                        </ul>
-                    </div>
-                    <div class="tool-details">
-                        <div class="tool-detail-item">
-                            <strong>Price:</strong>
-                            <span>FREE (Open Source)</span>
-                        </div>
-                        <div class="tool-detail-item">
-                            <strong>Best For:</strong>
-                            <span>Privacy-focused users</span>
-                        </div>
-                        <div class="tool-detail-item">
-                            <strong>Setup Time:</strong>
-                            <span>5 minutes</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="guide-section">
+        <h3>Which Tool Should You Choose?</h3>
+        <ul>
+          <li><strong>Choose Snipt if:</strong> You want instant sharing, no setup, and encrypted links. Perfect for teams and remote workers.</li>
+          <li><strong>Choose ShareX if:</strong> You're tech-savvy and need maximum customization and advanced features.</li>
+          <li><strong>Choose Greenshot if:</strong> You value privacy and want to keep all screenshots stored locally.</li>
+          <li><strong>Choose Snagit if:</strong> You need professional-grade features including video recording and don't mind paying.</li>
+        </ul>
+      </div>
 
-                <!-- Snagit Card -->
-                <div class="tool-card">
-                    <div class="tool-badge">Best for Professionals</div>
-                    <div>
-                        <h3>Snagit (TechSmith)</h3>
-                        <p>Premium professional screenshot and screen recording tool</p>
-                        <ul class="tool-pros">
-                            <li>Video recording and editing</li>
-                            <li>Advanced drawing tools</li>
-                            <li>Cloud storage included</li>
-                            <li>Professional-grade features</li>
-                            <li>Desktop and mobile apps</li>
-                            <li>Integration with TechSmith ecosystem</li>
-                        </ul>
-                    </div>
-                    <div class="tool-details">
-                        <div class="tool-detail-item">
-                            <strong>Price:</strong>
-                            <span>$59.99/year</span>
-                        </div>
-                        <div class="tool-detail-item">
-                            <strong>Best For:</strong>
-                            <span>Professionals needing video</span>
-                        </div>
-                        <div class="tool-detail-item">
-                            <strong>Setup Time:</strong>
-                            <span>Installation required</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Comparison Table -->
-                <h2 style="text-align: center; margin-top: 60px; margin-bottom: 30px;">Quick Comparison</h2>
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Feature</th>
-                            <th>Snipt</th>
-                            <th>ShareX</th>
-                            <th>Greenshot</th>
-                            <th>Snagit</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Price</strong></td>
-                            <td><span class="check">Free</span></td>
-                            <td><span class="check">Free</span></td>
-                            <td><span class="check">Free</span></td>
-                            <td>$59.99/yr</td>
-                        </tr>
-                        <tr>
-                            <td><strong>No Installation</strong></td>
-                            <td><span class="check">✓</span></td>
-                            <td><span class="cross">✗</span></td>
-                            <td><span class="cross">✗</span></td>
-                            <td><span class="cross">✗</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Cloud Sharing</strong></td>
-                            <td><span class="check">✓</span></td>
-                            <td><span class="check">✓</span></td>
-                            <td><span class="cross">✗</span></td>
-                            <td><span class="check">✓</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Encrypted Links</strong></td>
-                            <td><span class="check">✓</span></td>
-                            <td><span class="cross">✗</span></td>
-                            <td><span class="cross">✗</span></td>
-                            <td><span class="cross">✗</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Video Recording</strong></td>
-                            <td><span class="cross">✗</span></td>
-                            <td><span class="check">✓</span></td>
-                            <td><span class="cross">✗</span></td>
-                            <td><span class="check">✓</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Screenshot Gallery</strong></td>
-                            <td><span class="check">✓</span></td>
-                            <td><span class="cross">✗</span></td>
-                            <td><span class="cross">✗</span></td>
-                            <td><span class="check">✓</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Open Source</strong></td>
-                            <td><span class="check">✓</span></td>
-                            <td><span class="check">✓</span></td>
-                            <td><span class="check">✓</span></td>
-                            <td><span class="cross">✗</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Learning Curve</strong></td>
-                            <td>Minimal</td>
-                            <td>Steep</td>
-                            <td>Low</td>
-                            <td>Low</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <!-- Decision Guide -->
-                <div class="guide-section">
-                    <h3>Which Tool Should You Choose?</h3>
-                    <ul>
-                        <li><strong>Choose Snipt if:</strong> You want instant sharing, no setup, and encrypted links. Perfect for teams and remote workers.</li>
-                        <li><strong>Choose ShareX if:</strong> You're tech-savvy and need maximum customization and advanced features.</li>
-                        <li><strong>Choose Greenshot if:</strong> You value privacy and want to keep all screenshots stored locally.</li>
-                        <li><strong>Choose Snagit if:</strong> You need professional-grade features including video recording and don't mind paying.</li>
-                    </ul>
-                </div>
-
-                <div class="cta-section">
-                    <h2>Get Started with Snipt Today</h2>
-                    <p>Download instantly - no installation, no registration, no compromise</p>
-                    <a href="https://github.com/MartinKG60/snipt/releases/latest/download/Snipt.zip" class="btn-primary btn-lg" download style="margin-top: 20px;">Download Snipt Now</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
+      <div class="cta-section">
+        <h2>Get Started with Snipt Today</h2>
+        <p>Download instantly - no installation, no registration, no compromise</p>
+        <a href="https://github.com/MartinKG60/snipt/releases/latest/download/Snipt.zip" class="btn-primary btn-lg cta-button" download>Download Snipt Now</a>
+      </div>
+    </div>
+  </section>
+</main>

@@ -18,211 +18,142 @@ schema: |
     }
   }
   </script>
-custom_css: |
-  .comparison-hero { padding: 60px 20px 40px; text-align: center; margin-top: 60px; }
-  .comparison-hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
-  .comparison-table { width: 100%; border-collapse: collapse; margin: 40px 0; background: rgba(255, 255, 255, 0.03); border-radius: 12px; overflow: hidden; border: 1px solid var(--border-light); }
-  .comparison-table th, .comparison-table td { padding: 15px 20px; text-align: left; border-bottom: 1px solid var(--border-light); }
-  .comparison-table th { background: rgba(11, 147, 255, 0.1); font-weight: 600; color: var(--primary-500); }
-  .comparison-table tr:last-child td { border-bottom: none; }
-  .comparison-table .feature-name { font-weight: 500; width: 30%; }
-  .comparison-table .snipt-col, .comparison-table .snagit-col { width: 35%; }
-  .check { color: #10b981; font-weight: bold; }
-  .cross { color: #ef4444; }
-  .price-highlight { background: rgba(16, 185, 129, 0.1); color: #10b981; font-weight: 600; }
-  .comparison-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 60px 0; }
-  .comparison-card { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-light); border-radius: 12px; padding: 30px; }
-  .comparison-card h3 { margin-bottom: 15px; color: var(--primary-500); }
 ---
 
-        .comparison-card ul {
-            list-style: none;
-            padding: 0;
-        }
+<main>
+  <section class="comparison-hero">
+    <div class="container">
+      <h1>Snipt vs Snagit</h1>
+      <p class="section-subtitle">Why thousands are switching from Snagit to Snipt</p>
+    </div>
+  </section>
 
-        .comparison-card li {
-            margin-bottom: 10px;
-            padding-left: 25px;
-            position: relative;
-        }
+  <section class="content-section">
+    <div class="container">
+      <h2 class="comparison-heading">Feature & Price Comparison</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th class="feature-name">Feature</th>
+            <th class="snipt-col">Snipt</th>
+            <th class="snagit-col">Snagit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="price-highlight">
+            <td class="feature-name"><strong>Price</strong></td>
+            <td class="snipt-col"><strong>FREE</strong></td>
+            <td class="snagit-col"><strong>$59.99/year</strong></td>
+          </tr>
+          <tr>
+            <td class="feature-name">No Installation Required</td>
+            <td class="snipt-col"><span class="check">✓</span></td>
+            <td class="snagit-col"><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Cloud Upload & Sharing</td>
+            <td class="snipt-col"><span class="check">✓</span></td>
+            <td class="snagit-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Encrypted Shareable Links</td>
+            <td class="snipt-col"><span class="check">✓</span></td>
+            <td class="snagit-col"><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Screenshot Gallery</td>
+            <td class="snipt-col"><span class="check">✓</span></td>
+            <td class="snagit-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Video Recording</td>
+            <td class="snipt-col"><span class="cross">✗</span></td>
+            <td class="snagit-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Advanced Drawing Tools</td>
+            <td class="snipt-col"><span class="check">✓</span></td>
+            <td class="snagit-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Lightweight & Fast</td>
+            <td class="snipt-col"><span class="check">✓</span></td>
+            <td class="snagit-col"><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Free Core Features</td>
+            <td class="snipt-col"><span class="check">✓</span></td>
+            <td class="snagit-col"><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Quick Share to Team</td>
+            <td class="snipt-col"><span class="check">✓</span></td>
+            <td class="snagit-col"><span class="check">✓</span></td>
+          </tr>
+        </tbody>
+      </table>
 
-        .comparison-card li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #10b981;
-            font-weight: bold;
-        }
+      <div class="comparison-grid">
+        <div class="comparison-card">
+          <h3>Snipt Advantages</h3>
+          <ul>
+            <li><strong>100% Free</strong> - no subscription fees</li>
+            <li>Download and run instantly - no installation</li>
+            <li>Encrypted shareable links for security</li>
+            <li>Lightweight - minimal resource usage</li>
+            <li>Fast and responsive interface</li>
+            <li>Perfect for support teams and collaboration</li>
+            <li>Built-in annotation tools (arrows, text, highlights)</li>
+          </ul>
+        </div>
 
-        .cta-section {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, rgba(11, 147, 255, 0.1) 0%, transparent 100%);
-            border-radius: 12px;
-            margin: 60px 0;
-        }
+        <div class="comparison-card">
+          <h3>Snagit Strengths</h3>
+          <ul>
+            <li>Video recording and editing capability</li>
+            <li>More advanced drawing and shape tools</li>
+            <li>Larger content library</li>
+            <li>Integration with TechSmith ecosystem</li>
+            <li>Professional-grade features</li>
+            <li>Desktop and mobile apps</li>
+            <li>Established tool with long history</li>
+          </ul>
+        </div>
+      </div>
 
-        .cta-section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
+      <div class="cta-section">
+        <h2>Save $60/year with Snipt</h2>
+        <p>Get all the screenshot sharing features you need - completely free</p>
+        <a href="https://github.com/MartinKG60/snipt/releases/latest/download/Snipt.zip" class="btn-primary btn-lg" download>Download Snipt Now</a>
+      </div>
 
-        @media (max-width: 768px) {
-            .comparison-table .feature-name,
-            .comparison-table .snipt-col,
-            .comparison-table .snagit-col {
-                width: 100%;
-                display: block;
-            }
+      <div class="comparison-highlight">
+        <h3>The Bottom Line</h3>
+        <p>
+          If you need professional video recording and advanced editing, Snagit might be worth the investment. However, for pure screenshot capture, annotation, and sharing,
+          <strong>Snipt delivers the same functionality without the annual subscription</strong>.
+        </p>
+        <p><strong>Snipt is the better choice if you:</strong></p>
+        <ul>
+          <li>Want to save $60+ per year</li>
+          <li>Need instant encrypted sharing links</li>
+          <li>Prefer lightweight tools that don't hog resources</li>
+          <li>Work in a support or remote team</li>
+          <li>Don't need video recording features</li>
+          <li>Value simplicity and speed over premium features</li>
+        </ul>
+      </div>
 
-            .comparison-table th,
-            .comparison-table td {
-                padding: 10px 15px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div id="header-placeholder"></div>
-
-    <main>
-        <section class="comparison-hero">
-            <div class="container">
-                <h1>Snipt vs Snagit</h1>
-                <p class="section-subtitle">Why thousands are switching from Snagit to Snipt</p>
-            </div>
-        </section>
-
-        <section>
-            <div class="container">
-                <h2 style="text-align: center; margin-bottom: 40px;">Feature & Price Comparison</h2>
-                
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th class="feature-name">Feature</th>
-                            <th class="snipt-col">Snipt</th>
-                            <th class="snagit-col">Snagit</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="price-highlight">
-                            <td class="feature-name"><strong>Price</strong></td>
-                            <td class="snipt-col"><strong>FREE</strong></td>
-                            <td class="snagit-col"><strong>$59.99/year</strong></td>
-                        </tr>
-                        <tr>
-                            <td class="feature-name">No Installation Required</td>
-                            <td class="snipt-col"><span class="check">✓</span></td>
-                            <td class="snagit-col"><span class="cross">✗</span></td>
-                        </tr>
-                        <tr>
-                            <td class="feature-name">Cloud Upload & Sharing</td>
-                            <td class="snipt-col"><span class="check">✓</span></td>
-                            <td class="snagit-col"><span class="check">✓</span></td>
-                        </tr>
-                        <tr>
-                            <td class="feature-name">Encrypted Shareable Links</td>
-                            <td class="snipt-col"><span class="check">✓</span></td>
-                            <td class="snagit-col"><span class="cross">✗</span></td>
-                        </tr>
-                        <tr>
-                            <td class="feature-name">Screenshot Gallery</td>
-                            <td class="snipt-col"><span class="check">✓</span></td>
-                            <td class="snagit-col"><span class="check">✓</span></td>
-                        </tr>
-                        <tr>
-                            <td class="feature-name">Video Recording</td>
-                            <td class="snipt-col"><span class="cross">✗</span></td>
-                            <td class="snagit-col"><span class="check">✓</span></td>
-                        </tr>
-                        <tr>
-                            <td class="feature-name">Advanced Drawing Tools</td>
-                            <td class="snipt-col"><span class="check">✓</span></td>
-                            <td class="snagit-col"><span class="check">✓</span></td>
-                        </tr>
-                        <tr>
-                            <td class="feature-name">Lightweight & Fast</td>
-                            <td class="snipt-col"><span class="check">✓</span></td>
-                            <td class="snagit-col"><span class="cross">✗</span></td>
-                        </tr>
-                        <tr>
-                            <td class="feature-name">Free Core Features</td>
-                            <td class="snipt-col"><span class="check">✓</span></td>
-                            <td class="snagit-col"><span class="cross">✗</span></td>
-                        </tr>
-                        <tr>
-                            <td class="feature-name">Quick Share to Team</td>
-                            <td class="snipt-col"><span class="check">✓</span></td>
-                            <td class="snagit-col"><span class="check">✓</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="comparison-grid">
-                    <div class="comparison-card">
-                        <h3>Snipt Advantages</h3>
-                        <ul>
-                            <li><strong>100% Free</strong> - no subscription fees</li>
-                            <li>Download and run instantly - no installation</li>
-                            <li>Encrypted shareable links for security</li>
-                            <li>Lightweight - minimal resource usage</li>
-                            <li>Fast and responsive interface</li>
-                            <li>Perfect for support teams and collaboration</li>
-                            <li>Built-in annotation tools (arrows, text, highlights)</li>
-                        </ul>
-                    </div>
-
-                    <div class="comparison-card">
-                        <h3>Snagit Strengths</h3>
-                        <ul>
-                            <li>Video recording and editing capability</li>
-                            <li>More advanced drawing and shape tools</li>
-                            <li>Larger content library</li>
-                            <li>Integration with TechSmith ecosystem</li>
-                            <li>Professional-grade features</li>
-                            <li>Desktop and mobile apps</li>
-                            <li>Established tool with long history</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="cta-section">
-                    <h2>Save $60/year with Snipt</h2>
-                    <p>Get all the screenshot sharing features you need - completely free</p>
-                    <a href="https://github.com/MartinKG60/snipt/releases/latest/download/Snipt.zip" class="btn-primary btn-lg" download style="margin-top: 20px;">Download Snipt Now</a>
-                </div>
-
-                <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-light); border-radius: 12px; padding: 30px; margin-top: 40px;">
-                    <h3>The Bottom Line</h3>
-                    <p>
-                        If you need professional video recording and advanced editing, Snagit might be worth the investment. However, for pure screenshot capture, annotation, and sharing, 
-                        <strong>Snipt delivers the same functionality without the annual subscription</strong>.
-                    </p>
-                    <p style="margin-top: 15px;">
-                        <strong>Snipt is the better choice if you:</strong>
-                    </p>
-                    <ul style="margin-left: 20px; margin-top: 10px;">
-                        <li>Want to save $60+ per year</li>
-                        <li>Need instant encrypted sharing links</li>
-                        <li>Prefer lightweight tools that don't hog resources</li>
-                        <li>Work in a support or remote team</li>
-                        <li>Don't need video recording features</li>
-                        <li>Value simplicity and speed over premium features</li>
-                    </ul>
-                </div>
-                
-                <div style="margin-top: 40px; padding: 30px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-light); border-radius: 12px;">
-                    <h3>Related Comparisons & Resources</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
-                        <a href="../best-screenshot-tools/" style="color: var(--primary-500); text-decoration: none;">Best Screenshot Tools</a>
-                        <a href="../../screenshot-tool-snagit/" style="color: var(--primary-500); text-decoration: none;">Screenshot Tool Snagit</a>
-                        <a href="../../screenshot-tool-with-editing/" style="color: var(--primary-500); text-decoration: none;">Tool with Editing</a>
-                        <a href="../../best-screenshot-tool-for-windows/" style="color: var(--primary-500); text-decoration: none;">Best for Windows</a>
-                        <a href="../../screenshot-tool-on-windows/" style="color: var(--primary-500); text-decoration: none;">Windows Screenshot Tool</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
+      <div class="guide-section">
+        <h3>Related Comparisons & Resources</h3>
+        <ul>
+          <li><a href="../best-screenshot-tools/">Best Screenshot Tools</a></li>
+          <li><a href="../../screenshot-tool-snagit/">Screenshot Tool Snagit</a></li>
+          <li><a href="../../screenshot-tool-with-editing/">Tool with Editing</a></li>
+          <li><a href="../../best-screenshot-tool-for-windows/">Best for Windows</a></li>
+          <li><a href="../../screenshot-tool-on-windows/">Windows Screenshot Tool</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
