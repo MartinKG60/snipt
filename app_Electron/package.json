@@ -7,6 +7,7 @@
     "name": "Snipt",
     "email": "support@snipt.app"
   },
+  "homepage": "https://snipt.app",
   "license": "MIT",
   "private": true,
   "scripts": {
