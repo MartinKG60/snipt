@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Professional screenshot and annotation tool",
   "main": "electron/main.js",
-  "author": "Snipt",
+  "author": {
+    "name": "Snipt",
+    "email": "support@snipt.app"
+  },
   "license": "MIT",
   "private": true,
   "scripts": {
